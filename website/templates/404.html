@@ -1,0 +1,13 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block title %}
+    Page not found | Minotaure - Robotique @ Mines Paris
+{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <img src="{% static "admin/img/404_with_text_white.png" %}"
+        width="100%">
+    </div>
+{% endblock content %}

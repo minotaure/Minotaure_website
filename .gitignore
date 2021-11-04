@@ -139,3 +139,10 @@ cython_debug/
 
 # PyCharm
 .idea
+
+# Paint.NET
+*.pdn
+/static/admin/img/404_minotaure.png
+/static/admin/img/404_minotaure_blue.png
+/static/admin/img/404_minotaure_blue_white.png
+/static/admin/img/404_with_text.png
