@@ -17,6 +17,17 @@
     <link rel="mask-icon" href="{% static "admin/icons/safari-pinned-tab.svg" %}" color="#5bbad5">
     <meta name="{% static "admin/icons/msapplication-TileColor" %}" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <!-- Fonts -->
+    <style>
+        @font-face {
+            font-family: 'Nasalization';
+            src: url("{% static "admin/fonts/nasalization-rg.otf" %}") format("opentype");
+        }
+
+        .nasa {
+            font-family: 'Nasalization';
+        }
+    </style>
 
     <title>{% block title %}{% endblock title %}</title>
 
@@ -28,7 +39,7 @@
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
                 <img class="bi me-2" width="80" height="80" src="{% static "admin/img/logo_minotaure.svg" %}">
                 <span class="fs-4">
-                    Minotaure - Le club de robotique des Mines de Paris
+                    <span class="nasa">Minotaure</span> - Le club de robotique des Mines de Paris
                 </span>
             </a>
             <div class="d-flex align-items-center"> <!-- Align nav items vertically -->
