@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "admin/icons/apple-touch-icon.png" %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "admin/icons/favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "admin/icons/favicon-16x16.png" %}">
+    <link rel="manifest" href="{% static "admin/icons/site.webmanifest" %}">
+    <link rel="mask-icon" href="{% static "admin/icons/safari-pinned-tab.svg" %}" color="#5bbad5">
+    <meta name="{% static "admin/icons/msapplication-TileColor" %}" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>{% block title %}{% endblock title %}</title>
+
+</head>
+<body>
+{% block content %}
+
+{% endblock content %}
+</body>
+</html>
