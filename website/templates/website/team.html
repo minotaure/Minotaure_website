@@ -1,0 +1,26 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block title %}
+    L'équipe | Minotaure - Robotique @ Mines Paris
+{% endblock title %}
+
+{% block content %}
+    <div class="container px-4 py-5" id="featured-3">
+        <h2 class="pb-2 border-bottom">
+            Équipe 2021-2022
+        </h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+            <div class="feature col">
+                {% include "website/team_member.html" with image_name="20tallot.jpg" name="Louis-Justin Tallot" position="Président" %}
+            </div>
+            <div class="feature col">
+                {% include "website/team_member.html" with image_name="20bretaud.jpg" name="David Bretaud" position="Secrétaire Général" %}
+
+            </div>
+            <div class="feature col">
+                {% include "website/team_member.html" with image_name="20desproges.jpg" name="Thomas Desproges" position="Trésorier" %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}
