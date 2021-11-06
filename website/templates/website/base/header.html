@@ -1,0 +1,22 @@
+{% load static %}
+
+<div class="container-fluid">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <img class="bi me-2" width="80" height="80" src="{% static "admin/img/logo_minotaure.svg" %}">
+            <span class="fs-4">
+                    <span class="nasa">Minotaure</span> - Le club de robotique des Mines de Paris
+                </span>
+        </a>
+        <div class="d-flex align-items-center"> <!-- Align nav items vertically -->
+            <ul class="nav nav-pills">
+                {#                    <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>#}
+                <li class="nav-item"><a href="/team/" class="nav-link">Équipe</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Projets</a></li>
+                {#                    <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>#}
+                <li class="nav-item"><a href="#" class="nav-link">Nous contacter</a></li>
+                <li class="nav-item rounded-pill"><a href="#" class="nav-link active">Espace membre</a></li>
+            </ul>
+        </div>
+    </header>
+</div>

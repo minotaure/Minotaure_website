@@ -1,110 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
     {% load static %}
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static "admin/css/vendor/bootstrap/bootstrap.min.css" %}">
-    <!-- Bootstrap JS -->
-    <script src="{% static "admin/js/vendor/bootstrap/bootstrap.bundle.min.js" %}" async></script>
-    <!-- Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static "admin/icons/apple-touch-icon.png" %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static "admin/icons/favicon-32x32.png" %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static "admin/icons/favicon-16x16.png" %}">
-    <link rel="manifest" href="{% static "admin/icons/site.webmanifest" %}">
-    <link rel="mask-icon" href="{% static "admin/icons/safari-pinned-tab.svg" %}" color="#5bbad5">
-    <meta name="{% static "admin/icons/msapplication-TileColor" %}" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <!-- Fonts -->
-    <style>
-        @font-face {
-            font-family: 'Nasalization';
-            src: url("{% static "admin/fonts/nasalization-rg.otf" %}") format("opentype");
-        }
 
-        .nasa {
-            font-family: 'Nasalization';
-        }
-    </style>
+    {% block head %}
+        {% include "website/base/head.html" %}
+    {% endblock head %}
 
     <title>{% block title %}{% endblock title %}</title>
 
 </head>
 <body>
 {% block header %}
-    <div class="container-fluid">
-        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                <img class="bi me-2" width="80" height="80" src="{% static "admin/img/logo_minotaure.svg" %}">
-                <span class="fs-4">
-                    <span class="nasa">Minotaure</span> - Le club de robotique des Mines de Paris
-                </span>
-            </a>
-            <div class="d-flex align-items-center"> <!-- Align nav items vertically -->
-                <ul class="nav nav-pills">
-{#                    <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>#}
-                    <li class="nav-item"><a href="/team" class="nav-link">Équipe</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Projets</a></li>
-{#                    <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>#}
-                    <li class="nav-item"><a href="#" class="nav-link">Nous contacter</a></li>
-                </ul>
-            </div>
-        </header>
-    </div>
+    {% include "website/base/header.html" %}
 {% endblock header %}
 {% block content %}
 
 {% endblock content %}
 {% block footer %}
-    <style>
-        .bi {
-            vertical-align: -.125em;
-        }
-    </style>
-
-    <div class="container-fluid" id="minotaure_footer">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                    <img src="{% static "admin/img/logo_minotaure.svg" %}"
-                         class="bi me-2"
-                         width="40"
-                         height="40"
-                    >
-                </a>
-                <span class="small text-muted nasa">
-                    &copy; 2021 Minotaure
-                </span>
-            </div>
-
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="me-2">
-                    <a class="text-muted" href="#">
-                        <a href="https://github.com/minotaure" target="_blank"
-                           class="mb-3 mb-md-0 text-muted text-decoration-none lh-1">
-                            <img class="bi" width="24" height="24"
-                                 src="{% static "admin/icons/github_logo.svg" %}">
-                        </a>
-                    </a>
-                </li>
-                <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-                    <symbol id="facebook" viewBox="0 0 16 16">
-                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
-                    </symbol>
-                </svg>
-                <li class="me-2">
-                    <a class="text-muted" href="https://www.facebook.com/minotaureEMP" target="_blank">
-                        <svg class="bi" width="24" height="24">
-                            <use xlink:href="#facebook"></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </footer>
-    </div>
-
+    {% include "website/base/footer.html" %}
 {% endblock footer %}
 </body>
 </html>
