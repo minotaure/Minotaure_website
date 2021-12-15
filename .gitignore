@@ -146,3 +146,4 @@ cython_debug/
 /static/admin/img/404_minotaure_blue.png
 /static/admin/img/404_minotaure_blue_white.png
 /static/admin/img/404_with_text.png
+/Minotaure_website/secrets.py
